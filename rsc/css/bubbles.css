@@ -1,0 +1,164 @@
+@import url ('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #FFFFFF;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.tbran {
+    font-size: 2em;
+    color: #ff3411;
+    pointer-events: none;
+    margin-right: 2%;
+    border-radius: 12px;
+    padding: 0px 15px;
+    background: #FFFFFF;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #ff3411;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    background: #ff3411;
+    color: #FFFFFF;
+}
+
+.navigation a.contact {
+    background: #ff3411;
+    color: #FFFFFF;
+}
+
+.all {
+    display: flex;
+}
+
+.bubbles img {
+    width: 10vh;
+    z-index: 1;
+}
+
+.bubbles {
+    z-index: 3;
+}
+
+#b1 {
+    position: fixed;
+    width: 46vh;
+    top: -20%;
+    left: -10%;
+}
+
+#b2 {
+    position: fixed;
+    width: 34vh;
+    top: -24%;
+    left: 61%;
+}
+
+#b3 {
+    position: fixed;
+    width: 38vh;
+    top: 20%;
+    left: 10%;
+}
+
+#b4 {
+    position: fixed;
+    width: 30vh;
+    top: 40%;
+    left: 5%;
+}
+
+#b5 {
+    position: fixed;
+    width: 54vh;
+    top: 0%;
+    left: 83%;
+}
+
+#contenu {
+    position: fixed;
+}
+
+#contenu #tbprofile {
+    height: 100vh;
+}
+
+#cv {
+    width: 60vw;
+    top: 100%;
+    left:20%;
+    position:fixed;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#all > #contenu > #cv {
+    height: 100%;
+}
+
+#cv section {
+    position: relative;
+    padding: 20px;
+    left: 7%;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    z-index: 4;
+    margin: 10px;
+}
+
+.key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.key div {
+    display: block;
+}
+
+.key div img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.key div p {
+    width: 150px;
+    word-wrap: break-word;
+}
+
