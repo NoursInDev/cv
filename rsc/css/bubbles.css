@@ -9,10 +9,8 @@
 }
 
 body {
-    background: #FFFFFF;
     min-height: 100vh;
-    overflow-x: hidden;
-    background-attachment: fixed;
+    background: #FFFFFF fixed;
 }
 
 header {
@@ -27,13 +25,15 @@ header {
     z-index: 100;
 }
 
+
+
 .tbran {
     font-size: 2em;
     color: #ff3411;
     pointer-events: none;
     margin-right: 2%;
     border-radius: 12px;
-    padding: 0px 15px;
+    padding: 0 15px;
     background: #FFFFFF;
 }
 
@@ -54,6 +54,12 @@ header {
 .navigation a.contact {
     background: #ff3411;
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 1000px) {
+    .navigation {
+        display: none;
+    }
 }
 
 .all {
@@ -100,7 +106,7 @@ header {
 #b5 {
     position: fixed;
     width: 54vh;
-    top: 0%;
+    top: 0;
     left: 83%;
 }
 
@@ -135,16 +141,54 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     z-index: 4;
     margin: 10px;
+    --color: rgba(30, 30, 30);
+    --bgColor: rgba(245, 245, 245);
+    min-height: 10vh;
+    align-content: center;
+    gap: 2rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--color);
+    background: var(--bgColor);
 }
+
+.profil-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+
+#profil {
+    grid-column: 1 / span 3;
+}
+
+#points {
+    grid-column: 1 / span 1;
+}
+
+#vu {
+    grid-column: 2 / span 2;
+}
+
+.profil-container > div {
+    display: block;
+    background-color: rgba(251, 178, 163, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    min-width: 50%;
+    max-width: 100%
+}
+
 
 .key {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .key div {
