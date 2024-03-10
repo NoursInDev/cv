@@ -35,6 +35,7 @@ header {
     border-radius: 12px;
     padding: 0 15px;
     background: #FFFFFF;
+    z-index: -1;
 }
 
 .navigation a {
@@ -112,6 +113,7 @@ header {
 
 #contenu {
     position: fixed;
+    height: 100%;
 }
 
 #contenu #tbprofile {
@@ -173,6 +175,20 @@ header {
     grid-column: 2 / span 2;
 }
 
+#competences {
+    grid-column: 1 / span 3;
+}
+
+#qualites {
+    grid-column: 4 / span 2;
+}
+
+#compqual > .profil-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
 .profil-container > div {
     display: block;
     background-color: rgba(251, 178, 163, 0.2);
@@ -205,4 +221,3 @@ header {
     width: 150px;
     word-wrap: break-word;
 }
-
