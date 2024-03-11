@@ -25,12 +25,13 @@ body {
     padding: 20px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    position: absolute;
 }
 
 p {
     position: relative;
-    left: -70%;
-    margin-left: -8.5em;
+    left: 0;
+    margin-left: 0;
     text-align: left;
     font-size: 1.25em;
     font-family: monospace;
