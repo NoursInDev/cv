@@ -49,10 +49,18 @@ window.addEventListener('scroll', () => {
         cv.style.top = 0
     }
 
-
-
     if (value > 3000) {
         cv.style.top = -(value - 3000) + 'px'
     }
 
+    var windowHeight = window.innerHeight;
+    var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+    var documentHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+    var limiteDeScroll = 10000;
+
+    if (scrollPosition + windowHeight >= documentHeight) {
+        if (scrollPosition <= documentHeight - limiteDeScroll) {
+            window.scrollTo(0, documentHeight - limiteDeScroll);
+        }
+    }
 });
