@@ -1,13 +1,22 @@
+html {
+    background: #191b22;
+    cursor: url("rsc/img/arrow-pointer-solid.svg"), auto;
+}
 .card-container {
     position: relative;
     height: 500px;
     width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-.card-container:hover .card {
+.card:hover {
     transform: rotateY(180deg);
 }
 .card {
-    position: absolute;
     height: 100%;
     width: 100%;
     transition: all 0.3s ease;
@@ -17,8 +26,13 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background: lightgreen;
     backface-visibility: hidden;
+}
+.card-front img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 20px;
 }
 .card-back {
     position: absolute;
@@ -27,4 +41,5 @@
     background: skyblue;
     backface-visibility: hidden;
     transform: rotateY(-180deg);
+    border-radius: 20px;
 }
