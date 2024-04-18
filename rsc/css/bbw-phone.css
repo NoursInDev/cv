@@ -1,45 +1,37 @@
-html {
-    background: #191b22;
-    cursor: url("rsc/img/arrow-pointer-solid.svg"), auto;
-}
-.card-container {
-    position: relative;
-    height: 500px;
-    width: 300px;
-    margin: 0 auto;
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    height: 100vh;
 }
-.card:hover {
-    transform: rotateY(180deg);
+
+p {
+    color: #333;
+    font-size: 20px;
+    text-align: center;
 }
-.card {
-    height: 100%;
+
+.error-code {
+    font-size: 100px;
+    color: #e74c3c;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    transition: all 0.3s ease;
-    transform-style: preserve-3d;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
-.card-front {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-}
-.card-front img {
-    height: 100%;
-    width: 100%;
-    object-fit: fill;
-    border-radius: 20px;
-}
-.card-back {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: skyblue;
-    backface-visibility: hidden;
-    transform: rotateY(-180deg);
-    border-radius: 20px;
+
+footer p {
+    color: white;
+    z-index: 2;
 }
