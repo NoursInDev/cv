@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+$color-white: #fff;
+
+$t-transform-cubic: cubic-bezier(0.56, 0.42, 0.28, 0.95);
+
+// Breakpoints
+$breakpoints: (
+"sm": 576px,
+"md": 768px,
+"lg": 1024px,
+"xl": 1440px,
+);
+
+@mixin bp-up($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+    @warn "Couldn't find breakpoint: `#{$breakpoint}`.";
+}
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background: #181818;
+    padding: 50px 0;
+    cursor: crosshair;
+}
+
+.cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.cursor__circle {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: var(--width);
+        height: 28px;
+        background: $color-white;
+        transform: translate(-50%, -50%);
+        border-radius: 12px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibiluty 0.3s ease;
+    }
+}
+
+.cursor__circle.cursor__circle--active::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cursor__text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    opacity: 0;
+    visibility: hidden;
+    width: var(--width);
+    overflow: hidden;
+}
+
+.cursor__text p {
+    font-weight: 700;
+    text-transform: uppercase;
+    will-change: transform;
+    margin: 0;
+}
+
+.cursor__circle.cursor__circle--active .cursor__text {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.15s;
+}
+
+.cursor__circle.cursor__circle--active .cursor__text p {
+    animation: animateProjectName 1.5s linear infinite;
+}
+
+@keyframes animateProjectName {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    margin: 0 16px;
+    place-self: start;
+
+    @include bp-up(md) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 16px;
+    }
+
+    @include bp-up(lg) {
+        column-gap: 48px;
+        row-gap: 100px;
+        margin: 0 48px;
+    }
+
+    @include bp-up(xl) {
+        column-gap: 200px;
+        margin: 0 100px;
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    cursor: none;
+    transition: transform 0.35s $t-transform-cubic, opacity 0.15s ease;
+
+    @include bp-up(md) {
+        &:nth-child(2) {
+            margin-top: 20%;
+        }
+
+        &:nth-child(3) {
+            margin-top: -20%;
+        }
+    }
+}
+
+.project__image {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 0 16px;
+    overflow: hidden;
+    background: #202020;
+    border-radius: 20px;
+    transition: border-radius 0.5s $t-transform-cubic;
+}
+
+.project__image img {
+    aspect-ratio: 1;
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+    object-fit: cover;
+    opacity: 0;
+    transition: transform 0.8s $t-transform-cubic;
+}
+
+.project__title,
+.project__description {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.project__title p {
+    color: $color-white;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    transition: transform 0.3s $t-transform-cubic 0.2s;
+}
+
+.project__description p {
+    font-size: 14px;
+    color: rgba($color-white, 0.5);
+    margin: 0;
+    transition: transform 0.4s $t-transform-cubic;
+}
+
+.project.project--hovered .project__title p,
+.project.project--hovered .project__description p {
+    transform: translateY(150%);
+}
+
+.projects.projects--hovered .project:not(.project--hovered) {
+    transform: scale(0.87);
+    opacity: 0.4;
+}
+
+.project.project--hovered .project__image {
+    border-radius: 50%;
+}
+
+.project.project--hovered .project__image img {
+    transform: scale(1.12);
+}
