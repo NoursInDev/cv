@@ -2,3 +2,15 @@
     margin: 0;
     padding: 0;
 }
+
+#sendhome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 3vh;
+}
+
+#sendhome img {
+    width: 5vh;
+    height: 5vh;
+}
