@@ -28,3 +28,23 @@ h4 {
 a {
     text-decoration: none;
 }
+
+#changing-text {
+    transition: opacity 0.5s ease-in-out;
+}
+
+#changing-text::before {
+    opacity: 0;
+}
+
+#changing-text::after {
+    opacity: 1;
+}
+
+p.semiboldp {
+    font-weight: 400;
+}
+
+p.xonefivep {
+    font-size: 1.5em;
+}

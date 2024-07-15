@@ -1,0 +1,125 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+    overflow-x:hidden;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+#intro {
+    padding: 20px;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#intro #circle {
+    width: 60vh;
+    height: 60vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle-text h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+#circle-text p {
+    text-align: center;
+    font-size: 2em;
+}
+
+.circle-word {
+    font-size: 1em;
+    font-weight: 400;
+    color: white;
+    opacity: 1;
+    text-align: center;
+}
+
+.part {
+    margin: 0 0 20px 0;
+    height: fit-content;
+}
+
+#bio {
+    padding: 20px;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 100vw;
+    height: fit-content;
+    padding: 5vh;
+    margin: 0 50px 50px 50px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text-box h1 {
+    font-size: 3em;
+}
+
+.text-box p {
+    margin: 20px;
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+.text-box a {
+    color: white;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.text-box a:visited {
+    color: white;
+}
+
+#values {
+    padding: 20px;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+#values h2 {
+    font-size: 2em;
+}
+
+#parcours {
+    padding: 20px;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+#parcours text-box {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#parcours .text-box img {
+    width: 90%;
+}
