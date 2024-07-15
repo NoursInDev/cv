@@ -2,23 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirection automatique</title>
-    <script>
-        function detectDevice() {
-            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        }
-        function redirectToPage() {
-            if (detectDevice()) {
-                window.location.href = "bbw-phone.html";
-            } else {
-                window.location.href = "bubbleworld.html";
-            }
-        }
-        window.onload = redirectToPage;
-    </script>
+    <title>Redirect</title>
 </head>
 <body>
-<p>Cette page effectue une redirection automatique en fonction de votre appareil.</p>
+
 </body>
+<script type="text/javascript">
+    window.location = "overview.html";</script>
 </html>

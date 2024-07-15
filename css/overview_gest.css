@@ -1,0 +1,162 @@
+/* Laptop / Desktop View */
+
+body {
+    overflow: hidden;
+}
+
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 4em;
+    z-index: 9999;
+    transition: opacity 0.2s ease-out;
+    text-align: center;
+}
+
+#continue {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    font-size: 0.5em;
+    transform: translateX(-50%);
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.container {
+    position: fixed;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.cards {
+    flex: 1;
+    height: 100%;
+    transition: flex 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cards:hover {
+    flex: 3;
+}
+
+#card1 {
+    background-image: url("../media/ov_background_dup/skills.jpg");
+}
+
+#card2 {
+    background-image: url("../media/ov_background_dup/skills2.jpg");
+}
+
+#card3 {
+    background-image: url("../media/ov_background_dup/skills3.jpg");
+}
+
+#card4 {
+    background-image: url("../media/ov_background_dup/skills4.jpg");
+}
+
+.cards .lateshow {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s ease-in-out;
+}
+
+.cards:hover .lateshow{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.centraltitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.centraltitle h1 {
+    font-size: 4em;
+    font-weight: 600;
+}
+
+.centraltitle p {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    body {
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    #intro {
+        font-size: 2em;
+    }
+
+    .container {
+        position: absolute;
+        flex-direction: column;
+        height: 400vh;
+    }
+
+    .cards {
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid #000;
+        border-top: 2px solid #000;
+    }
+
+    .cards:hover {
+        flex: 1;
+    }
+
+    .centraltitle {
+        background-color: rgba(0, 0, 0, 0.8);
+
+    }
+
+    .centraltitle h1 {
+        font-size: 2em;
+    }
+
+    .centraltitle p {
+        font-size: 1em;
+    }
+    .cards .lateshow {
+        visibility: visible;
+        opacity: 1;
+    }
+}
