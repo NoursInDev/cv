@@ -1,0 +1,114 @@
+body {
+    background: black;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
+
+#projects-home {
+    padding: 20px;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects-home h1 {
+    font-size: 3em;
+    text-align: center;
+    animation: btcg 0.75s ease-out forwards;
+}
+
+@keyframes btcg {
+    0% {
+        filter: blur(10px);
+        transform: scale(1);
+    }
+    100% {
+        filter: blur(0);
+        transform: scale(1.2);
+    }
+}
+
+#nav-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 5;
+}
+
+.nav-dot {
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.nav-dot:hover {
+    background: grey;
+}
+
+.glb-project {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project {
+    width: 85%;
+    height: 75%;
+    border-radius: 30px;
+
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    overflow: hidden;
+
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+#uhc .project {
+    position: relative;
+}
+
+#uhc .project::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../media/projects/fireforce.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+    z-index: -1;
+    display: flex;
+}
+
+.project .content {
+    flex: 1;
+    height: 100%;
+}
+
+.project .showroom {
+    flex: 2;
+    height: 100%;
+}
