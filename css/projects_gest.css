@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center;
     overflow: hidden;
 
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.83);
 }
 
 #uhc .project {
@@ -103,6 +103,11 @@ h1, h2, h3, h4, h5, h6, p {
     z-index: -1;
 }
 
+#uhc .project .showroom {
+    background: url("../media/projects/fireball.png") no-repeat center;
+    background-size: cover;
+}
+
 .project .content {
     margin: 50px;
     flex: 2;
@@ -110,11 +115,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .project .showroom {
+    position: relative;
     margin: 50px;
     flex: 1;
     height: calc(100% - 100px);
-    background: url("../media/projects/fireball.png") no-repeat center;
-    background-size: cover;
     border-radius: 30px;
 }
 
@@ -126,4 +130,36 @@ h1, h2, h3, h4, h5, h6, p {
 
 .article p {
     margin: 10px 0;
+}
+
+#bad .project{
+    background-color: rgb(255, 255, 255, 0.1);
+    position: relative;
+    display: flex;
+}
+
+#bad .project .showroom {
+    background: url("../media/projects/bad2.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#skyjo .project {
+    background-color: rgb(0, 255, 255, 0.2);
+    position: relative;
+    display: flex;
+}
+
+#skyjo .project .showroom {
+    background: url("../media/projects/skyjo.png") no-repeat center;
+    background-size: cover;
+    flex: 2;
+}
+
+#iutm .project {
+    background: url("../media/projects/calendar-2024-01-31_1_4.1.png") no-repeat center;
+    background-size: cover;
+}
+
+#iutm .project p, h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
 }
