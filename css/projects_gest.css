@@ -86,6 +86,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 #uhc .project {
     position: relative;
+    display: flex;
 }
 
 #uhc .project::after {
@@ -100,15 +101,29 @@ h1, h2, h3, h4, h5, h6, p {
     background-position: center;
     filter: blur(20px);
     z-index: -1;
-    display: flex;
 }
 
 .project .content {
-    flex: 1;
-    height: 100%;
+    margin: 50px;
+    flex: 2;
+    height: calc(100% - 100px);
 }
 
 .project .showroom {
-    flex: 2;
-    height: 100%;
+    margin: 50px;
+    flex: 1;
+    height: calc(100% - 100px);
+    background: url("../media/projects/fireball.png") no-repeat center;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.article {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.article p {
+    margin: 10px 0;
 }
