@@ -152,7 +152,16 @@ h1, h2, h3, h4, h5, h6, p {
 #skyjo .project .showroom {
     background: url("../media/projects/skyjo.png") no-repeat center;
     background-size: cover;
-    flex: 2;
+    flex: 1;
+    transition: flex 0.5s;
+}
+
+#skyjo .project .showroom:hover {
+    flex: 4;
+}
+
+#skyjo .project .showroom:hover .content {
+    flex: 1;
 }
 
 #iutm .project {
