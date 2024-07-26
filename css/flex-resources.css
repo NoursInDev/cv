@@ -1,0 +1,99 @@
+.hundred {
+    flex : 100;
+    background: rgb(30, 234, 32, 1);
+}
+
+.ninety-five {
+    flex : 95;
+    background: rgb(30, 234, 32, 0.95);
+}
+
+.ninety {
+    flex : 90;
+    background: rgb(30, 234, 32, 0.9);
+}
+
+.eighty-five {
+    flex : 85;
+    background: rgb(30, 234, 32, 0.85);
+}
+
+.eighty {
+    flex : 80;
+    background: rgb(30, 234, 32, 0.8);
+}
+
+.seventy-five {
+    flex : 75;
+    background: rgb(30, 234, 32, 0.75);
+}
+
+.seventy {
+    flex : 70;
+    background: rgb(30, 234, 32, 0.7);
+}
+
+.sixty-five {
+    flex : 65;
+    background: rgb(30, 234, 32, 0.65);
+}
+
+.sixty {
+    flex : 60;
+    background: rgb(30, 234, 32, 0.6);
+}
+
+.fifty-five {
+    flex : 55;
+    background: rgb(30, 234, 32, 0.55);
+}
+
+.fifty {
+    flex : 50;
+    background: rgb(30, 234, 32, 0.5);
+}
+
+.forty-five {
+    flex : 45;
+    background: rgb(30, 234, 32, 0.45);
+}
+
+.forty {
+    flex : 40;
+    background: rgb(30, 234, 32, 0.4);
+}
+
+.thirty-five {
+    flex : 35;
+    background: rgb(30, 234, 32, 0.35);
+}
+
+.thirty {
+    flex : 30;
+    background: rgb(30, 234, 32, 0.3);
+}
+
+.twenty-five {
+    flex : 25;
+    background: rgb(30, 234, 32, 0.25);
+}
+
+.twenty {
+    flex : 20;
+    background: rgb(30, 234, 32, 0.2);
+}
+
+.fifteen {
+    flex : 15;
+    background: rgb(30, 234, 32, 0.15);
+}
+
+.ten {
+    flex : 10;
+    background: rgb(30, 234, 32, 0.1);
+}
+
+.five {
+    flex : 5;
+    background: rgb(30, 234, 32, 0.05);
+}

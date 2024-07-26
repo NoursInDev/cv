@@ -2,6 +2,66 @@ body {
     background: black;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     color: white;
+}
+
+p {
+    font-weight: 400;
+}
+
+.skills-section {
+    margin: 50px;
+    width: calc(100vw - 100px);
+    height: calc(100vh - 100px);
+}
+
+.skills-section h1 {
+    font-size: 2.5em;
+    font-style: italic;
+    margin-top: 20px;
+    color: whitesmoke;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.skill-element {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 7vh;
+}
+
+.skill-part {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+.skill-part h1 {
+    margin: 0 0 0 10px;
+    font-size: 1.5em;
+}
+
+.skill-part p {
+    margin: 0 0 0 20px;
+    font-size: 1.2em;
+}
+
+.skill-balance {
+    opacity: 0;
+}
+
+.transition {
+    transition: flex 10s ease-out;
+}
+
+.row-reversed .skills-container .skill-element{
+    flex-direction: row-reverse;
 }
