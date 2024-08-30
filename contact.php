@@ -4,10 +4,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 header("Content-Type: text/html; charset=UTF-8");
-$svname = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "portfolio";
+
+include '/var/www/config.php';
 
 // connection
 $conn = mysqli_connect($svname, $user, $pass, $dbname);
