@@ -76,16 +76,7 @@ p {
 .explanation {
     position: relative;
     border-radius: 25px;
-    background-color: rgba(0, 0, 255, 0.5);
     margin: 25px;
-    height: calc(100vh - 100px);
-}
-
-.explanation .explanation-background {
-    position: absolute;
-    margin: 50px;
-    height: calc(100vh - 200px);
-    font-size: 40em;
 }
 
 .explanation .explanation-content {
