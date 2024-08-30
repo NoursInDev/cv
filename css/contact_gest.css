@@ -1,7 +1,97 @@
 body {
     background: black;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
+body section {
+    margin: 50px;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, button, form {
     color: white;
+}
+
+#cv {
+    flex: 3;
+    display: flex;
+}
+
+#cv img {
+    height: auto;
+    border-radius: 10px;
+}
+
+#cv button {
+    height: 100%;
+    border-radius: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    background-color: #00bf63;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#socials {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+#socials img {
+    margin: 15px;
+    height: 100px;
+}
+
+#contact {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #00bf63;
+    font-weight: 400;
+}
+
+#contact form input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #ffffff;
+    background: #008e4a;
+    color: white;
+    border-style: groove;
+}
+
+#contact form input[type="submit"] {
+    cursor: pointer;
+}
+
+#contact form textarea {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: #ffffff;
+    height: max(100px, 20vh);
+    background: #008e4a;
+    color: white;
+    resize: none;
 }
